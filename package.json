@@ -1,0 +1,27 @@
+{
+  "name": "bartlett-dfpi-rpi",
+  "version": "1.0.0",
+  "description": "",
+  "license": "MIT",
+  "author": {
+    "name": "Matt DesLauriers",
+    "email": "dave.des@gmail.com",
+    "url": "https://github.com/mattdesl"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "serve": "^11.2.0"
+  },
+  "scripts": {
+    "start": "serve demos"
+  },
+  "keywords": [],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mattdesl/bartlett-dfpi-rpi.git"
+  },
+  "homepage": "https://github.com/mattdesl/bartlett-dfpi-rpi",
+  "bugs": {
+    "url": "https://github.com/mattdesl/bartlett-dfpi-rpi/issues"
+  }
+}
