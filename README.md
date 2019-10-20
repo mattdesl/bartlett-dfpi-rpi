@@ -1,6 +1,6 @@
 # bartlett-dfpi-rpi
 
-A project that connects Raspberry Pi with a web browser via WebSockets.
+A project that connects Raspberry Pi Zero with a web browser via WebSockets.
 
 ## Guides
 

@@ -18,15 +18,28 @@ Now you can serve the client scripts locally with the following:
 npm run start
 ```
 
-Go to [http://localhost:5000/](http://localhost:5000/) to see the different demos.
+Go to [http://localhost:5000/](http://localhost:5000/) to open the different demos. You can edit the `sketch.js` scripts inside the [./demos](./demos) folders and reload the browser to see the result.
 
-Now plug in your Raspberry Pi (in the class it should already be set up with dependencies) and SSH into it:
+# Plug in Pi
 
+Now plug in your Raspberry Pi (in the class it should already be set up with dependencies).
+
+Plug the power micro USB into the "PWR" jack and the other jack will connect with the USB interface on your computer.
+
+Next, we need to SSH into it to have a shell that we can type in commands:
+
+- On Windows, you may need to SSH via a tool like PuTTY:
+  - [SSH using Windows](https://www.raspberrypi.org/documentation/remote-access/ssh/windows.md)
+  - You will also need to install [Bonjour for Windows](https://support.apple.com/kb/DL999?locale=en_US)
+  - Use `raspberrypi.local` as the Host Name or IP Address, `port` to 22, `Connection Type` to SSH, username as `pi` and password as `raspberry`
+- On Mac, you should be able to login to your Pi like so:
 ```sh
 ssh pi@raspberrypi.local
 ```
 
-Use the default password *raspberry*.
+When logging into the Pi, the default password is *raspberry*.
+
+# Run the Server
 
 Once you are in, run the server, which has already been stored on the SD Cards provided:
 
@@ -60,6 +73,16 @@ Possible options:
   - Choosing only one sensor such as `--sensors=light` will make sampling faster for that sensor
 - `--light-time=5` interval to sample light meter between 2.4 ms and 612 ms, will affect the max light value sampled
 - `--qnh=1013.25` pressure at your location for more accurate readings, defaults to mean sea level
+
+# Powering Off
+
+Kill the Pi server with Ctrl + C.
+
+Turn off the Pi with the following command, instead of unplugging it:
+
+```sh
+sudo poweroff
+```
 
 # Going Offline
 
@@ -98,3 +121,15 @@ sudo ifconfig wlan0 down
 ```sh
 sudo ifconfig wlan0 up
 ```
+
+# Troubleshooting
+
+Having trouble logging into your Pi? You can try Step 7 and 8 in this guide:
+
+https://desertbot.io/blog/headless-raspberry-pi-3-bplus-ssh-wifi-setup
+
+> :warning: Don't rename your Pi's hostname or password, just skip that part of the guide.
+
+There are some other suggestions and troubleshooting information in this guide:
+
+- https://learn.adafruit.com/turning-your-raspberry-pi-zero-into-a-usb-gadget/ethernet-gadget
