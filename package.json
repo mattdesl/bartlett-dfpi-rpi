@@ -10,10 +10,12 @@
   },
   "dependencies": {},
   "devDependencies": {
+    "live-server": "^1.2.1",
     "serve": "^11.2.0"
   },
   "scripts": {
-    "start": "serve demos"
+    "start": "serve demos",
+    "dev": "live-server demos --port=5000 --no-browser"
   },
   "keywords": [],
   "repository": {

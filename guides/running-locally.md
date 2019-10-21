@@ -15,10 +15,10 @@ npm install
 Now you can serve the client scripts locally with the following:
 
 ```sh
-npm run start
+npm run dev
 ```
 
-Go to [http://localhost:5000/](http://localhost:5000/) to open the different demos. You can edit the `sketch.js` scripts inside the [./demos](./demos) folders and reload the browser to see the result.
+Go to [http://localhost:5000/](http://localhost:5000/) to open the different demos. You can edit the `sketch.js` scripts inside the [./demos](./demos) folders and the browser should reload to show the new results.
 
 # Plug in Pi
 
